@@ -1,0 +1,11 @@
+{
+  "name": "sundwell",
+  "owner": { "name": "Sundwell" },
+  "plugins": [
+    {
+      "name": "jira-task",
+      "source": "./plugins/jira-task",
+      "description": "Jira task descriptions in a fixed schema (summary, Frontend, Backend, Acceptance Criteria), created or updated via the Atlassian MCP"
+    }
+  ]
+}
