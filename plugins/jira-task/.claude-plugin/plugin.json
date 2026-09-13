@@ -1,6 +1,6 @@
 {
   "name": "jira-task",
   "description": "Turns a couple of rough sentences into a Jira task description in a fixed schema (summary, Frontend, Backend, Acceptance Criteria) and creates or updates the ticket via the Atlassian MCP",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": { "name": "Sundwell" }
 }

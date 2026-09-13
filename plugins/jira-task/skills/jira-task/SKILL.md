@@ -57,11 +57,22 @@ Requirements, Slack links, numbers, field names the user mentioned, and every AC
 come only from what the user gave. Not enough for a section - **ask**, do not fill
 with something plausible. An empty section beats an invented one.
 
+Where the facts come from, in this order:
+- what the user typed, plus a Slack thread pasted as extra context - the primary source.
+  The user usually copies the thread in by hand; treat it as given facts, and put its
+  link at the top of the description if one was given
+- Jira via MCP - search the project for tickets on the same feature or page and reuse
+  their terminology, field names and already existing endpoints; if a parent or related
+  ticket is mentioned, read it and its comments
+- the backend repo from Team settings - if it is not cloned locally, read it through `gh`
+  rather than guessing
+
 The exception is **endpoints**. The ticket is written before the backend exists, so
 proposing an endpoint is expected, not inventing. Propose it by pattern: look at
-neighbouring routes in the backend repo from Team settings and take similar naming,
-path shape and logic. If the repo is not available, mirror the closest existing
-endpoint the user or the context mentions, and say that is what you did.
+neighbouring routes in the backend repo (from Team settings), locally or through `gh`
+(`gh api repos/<owner>/<repo>/contents/<file with routes>`), and take similar naming, path shape and logic. If the repo cannot be
+reached either way, mirror the closest existing endpoint the user or the context
+mentions, and say that is what you did.
 
 **4. Backend - keep it short.** Per endpoint:
 - approximate request body
