@@ -1,5 +1,5 @@
 # Task description examples
-Thirteen real TECH tickets written in this schema, October 2025 onward. This is the style reference - look at structure, phrasing, length, how endpoints and AC are written.
+Thirteen real tickets written in this schema, October 2025 onward. This is the style reference - look at structure, phrasing, length, how endpoints and AC are written.
 
 ---
 
@@ -86,7 +86,7 @@ Also we’ve adding a status for “Force Batch Processing” action and display
 
 **Fix timeout problem while generating merchant report**
 
-When pressing “Generate Merchant Reports” button on Merchant Finance Report Tool page both on dev and staging it frequently throws an error with “connection refused” on reporting-svc.backend:8080
+When pressing “Generate Merchant Reports” button on Merchant Finance Report Tool page both on dev and staging it frequently throws an error with “connection refused” on reporting-service.internal:8080
 
 Here is thread with more context <jira comment link>
 
@@ -454,7 +454,7 @@ labelling is automatically done on backend side via keywords in the statement de
 
    1. John Doe | <IBAN> | SEPA Payments Bitcoin Sale <uuid> - **"Purchase Crypto"** type, cuz it has uuid / bitcoin sale keyword
    2. | <BIC> | SEPA Payments Returned Transaction MS03 - **"Refund crypto purchase"** type due to "Returned" keyword (it can be "Return", "RETURN", RTN, rtn and kinda these keywords which we will populate time to time as I understood)
-   3. PWE - Payments Charges | Charges - **"Bank fees"** type
+   3. ACME - Payments Charges | Charges - **"Bank fees"** type
 2. All of them generated automatically by some banking system and always (at least for now) have same structure
 
 **Acceptance Criteria:**
