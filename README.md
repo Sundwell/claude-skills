@@ -4,7 +4,7 @@ Claude Code skills I use day to day. Each one lives in `plugins/<name>/skills/<n
 
 ## jira-task
 
-Turns a couple of rough sentences into a Jira task description in one fixed schema and, on "ok", creates or updates the ticket through the Atlassian MCP. The schema is short on purpose - a plain-language summary, an optional Frontend list, an optional Backend list with endpoints, and Acceptance Criteria written through a tester's eyes.
+Turns a couple of rough sentences into a Jira task description in one fixed schema and, on "ok", creates or updates the ticket through the Atlassian MCP. The schema is short on purpose - a plain-language summary, optional Open Questions for what is not decided yet, an optional Frontend list, an optional Backend list with endpoints, and Acceptance Criteria written through a tester's eyes.
 
 The skill leans on `examples.md`, 13 real tickets in this schema (anonymized). Style does not transfer through descriptions, it transfers through examples, so swap that file for your own tickets once you have a dozen.
 
@@ -55,7 +55,7 @@ Cursor, Copilot, VS Code and OpenCode also read `~/.claude/skills/`, so an exist
 
 ### Set up for your team
 
-Open `SKILL.md`, fill in the "Team settings" table - Jira project key, backend repo to mirror endpoint naming from. Creating and updating tickets needs the [Atlassian MCP](https://www.atlassian.com/platform/remote-mcp-server) connected in your agent (Claude Code, Codex, Cursor and the others all support MCP servers); each person authorizes with their own Atlassian account. Without it the skill still drafts the description, you paste it into Jira yourself.
+Open `SKILL.md`, fill in the "Team settings" table - Jira project key, Atlassian site, backend repo to mirror endpoint naming from, and the shape of new list endpoints. Creating and updating tickets needs the [Atlassian MCP](https://www.atlassian.com/platform/remote-mcp-server) connected in your agent (Claude Code, Codex, Cursor and the others all support MCP servers); each person authorizes with their own Atlassian account. Without it the skill still drafts the description, you paste it into Jira yourself.
 
 ## License
 
